@@ -33,7 +33,6 @@ rule_based_chatbot/
 ├── frontend/            # React + TypeScript + Vite web application
 └── README.md
 ```
-
 Each module has a single responsibility:
 
 | Module | Responsibility |
@@ -48,6 +47,8 @@ Each module has a single responsibility:
 This separation keeps the business logic (sanitizing, matching) free
 of `input()`/`print()` calls, so `input_handler.py` and
 `response_engine.py` can be unit tested independently of the console.
+
+<img width="1512" height="982" alt="Screenshot 2026-07-17 at 10 42 20 PM" src="https://github.com/user-attachments/assets/b8216d57-21d9-4b73-967e-da64eef5040c" />
 
 ## Installation & Setup
 
