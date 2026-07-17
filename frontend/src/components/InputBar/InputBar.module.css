@@ -1,0 +1,115 @@
+.container {
+  padding: 0 var(--spacing-4) var(--spacing-4);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.inputWrapper {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  padding: 10px 10px 10px 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all var(--transition-fast);
+}
+
+.inputWrapper:focus-within {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--color-text-primary);
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  resize: none;
+  padding: 4px 0;
+  margin: 0;
+  height: 24px; /* matches line-height (16px * 1.5) */
+  max-height: 200px;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+.textarea::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.rightActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.iconButton {
+  background: transparent;
+  border: none;
+  color: #b3b3b3;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+  margin: 0;
+}
+
+.iconButton:hover {
+  color: #ffffff;
+}
+
+.primaryButton {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: var(--radius-full);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  margin: 0;
+}
+
+.primaryButton:hover:not(:disabled) {
+  transform: scale(1.05);
+  background-color: #f0f0f0;
+}
+
+.primaryButton:disabled, .primaryButton.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  margin-top: var(--spacing-2);
+  padding: 0 var(--spacing-4);
+}

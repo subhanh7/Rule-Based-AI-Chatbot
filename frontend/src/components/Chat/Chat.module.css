@@ -1,0 +1,40 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.messagesArea {
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+  /* Make room for the floating input bar */
+  padding-bottom: 120px;
+}
+
+.messagesList {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px var(--spacing-4) var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+}
+
+.indicatorWrapper {
+  margin-right: auto;
+}
+
+.inputArea {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, transparent, var(--color-bg-base) 30%);
+  padding-top: var(--spacing-8);
+  pointer-events: none; /* Let clicks pass through the gradient */
+}
+
+.inputArea > * {
+  pointer-events: auto; /* Re-enable clicks on the actual input bar */
+}
